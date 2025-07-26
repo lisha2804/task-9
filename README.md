@@ -19,7 +19,8 @@ A responsive and interactive checkout page built using HTML, CSS, and JavaScript
 
 ### Mobile View
 
-![Mobile Screenshot](images/ss2.png)
+![Mobile Screenshot](images/ss2.png)  
+
 ![Mobile Screenshot](images/ss3.png)
 
 ---
