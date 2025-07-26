@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Decor Store – Products</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ 
+  <header class="navbar">
+  <div class="logo">The Decor Store</div>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="#" class="active">Products</a>
+    <a href="checkout.html">Checkout</a>
+  </nav>
+
+  <div class="cart-icon-container" onclick="toggleCart()">
+    <img src="images/cart-icon.svg" alt="Cart" class="cart-icon" />
+    <span id="cart-count" class="cart-badge" style="display: none;">0</span>
+  </div>
+  <button class="hamburger" id="hamburger">&#9776;</button>
+</header>
+
+
+<!-- Cart Sidebar -->
+<div id="cart-sidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button class="close-cart" onclick="toggleCart()">×</button>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-footer">
+    <a href="checkout.html" class="checkout-btn">Checkout</a>
+
+  </div>
+</div>
+
+
+  <section class="controls">
+    <input type="text" id="searchInput" placeholder="Search products..." />
+    
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="Home Decor">Home Decor</option>
+      <option value="Furniture">Furniture</option>
+      <option value="Lighting">Lighting</option>
+    </select>
+
+    <select id="priceSort">
+      <option value="">Sort by Price</option>
+      <option value="low-high">Low → High</option>
+      <option value="high-low">High → Low</option>
+    </select>
+  </section>
+
+
+<!--Products-->
+  <main id="productsSection" class="product-grid">
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <img src="" alt="Product Image" class="modal-image" />
+      <h2 class="modal-title"></h2>
+      <span class="modal-category"></span>
+      <p class="modal-price"></p>
+      <p class="modal-description"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
